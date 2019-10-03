@@ -851,6 +851,11 @@ FORCE_INLINE __m128i _mm_cmplt_epu32(__m128i a, __m128i b)
 	return (__m128i)vcltq_u32((uint32x4_t)a, (uint32x4_t)b);
 }
 
+FORCE_INLINE __m128i _mm_cmplt_epi16(__m128i a, __m128i b)
+{
+    return (__m128i)vcltq_s16(a, b);
+}
+
 FORCE_INLINE __m128i _mm_cmplt_epu16(__m128i a, __m128i b)
 {
 	return (__m128i)vcltq_u16((uint16x8_t)a, (uint16x8_t)b);
